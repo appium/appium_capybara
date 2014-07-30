@@ -6,12 +6,11 @@ end
 
 add_to_path 'lib'
 
-require 'appium_capybara_lib/common/version'
+require 'appium_capybara/common/version'
 
 Gem::Specification.new do |s|
   # 1.8.x is not supported
   s.required_ruby_version = '>= 1.9.3'
-
   s.name          = 'appium_capybara'
   s.version       = AppiumCapybara::VERSION
   s.date          = AppiumCapybara::DATE
@@ -24,4 +23,6 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'appium_lib', '>= 4.0.0'
   s.add_runtime_dependency 'capybara', '>= 2.4.1'
+
+  s.files = `git ls-files`.split "\n"
 end
