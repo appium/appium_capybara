@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/appium/appium_capybara'
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'appium_lib', '>= 4.0.0'
-  s.add_runtime_dependency 'capybara', '>= 2.4.1'
+  s.add_runtime_dependency 'appium_lib', '~> 4', '>= 4.1.0'
+  s.add_runtime_dependency 'capybara', '~> 2.4', '>= 2.4.1'
 
   s.files = `git ls-files`.split "\n"
 end
