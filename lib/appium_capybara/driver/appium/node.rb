@@ -1,5 +1,5 @@
-module Capybara::Appium
-  class Capybara::Appium::Node < Capybara::Driver::Node
+module Appium::Capybara
+  class Appium::Capybara::Node < Capybara::Driver::Node
     def [](name)
       native.attribute(name.to_s)
     rescue Selenium::WebDriver::Error::WebDriverError
@@ -24,6 +24,10 @@ module Capybara::Appium
 
     def set(value)
       native.clear
+      send_keys(value)
+    end
+
+    def send_keys(value)
       native.send_keys(value.to_s)
     end
 

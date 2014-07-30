@@ -8,7 +8,7 @@ module Capybara
       if @touched
         driver.reset!
         # This is ugly and i know it
-        assert_no_selector(:xpath, "/html/body/*") unless driver.instance_of?(Capybara::Appium::Driver)
+        assert_no_selector(:xpath, "/html/body/*") unless driver.instance_of?(Appium::Capybara::Driver)
         @touched = false
       end
       raise_server_error!

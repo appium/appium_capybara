@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   # 1.8.x is not supported
   s.required_ruby_version = '>= 1.9.3'
   s.name          = 'appium_capybara'
-  s.version       = AppiumCapybara::VERSION
-  s.date          = AppiumCapybara::DATE
+  s.version       = Appium::Capybara::VERSION
+  s.date          = Appium::Capybara::DATE
   s.license       = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
   s.description   = s.summary = 'Library to add appium support to Capybara'
   s.description   += '.' # avoid identical warning
