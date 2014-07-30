@@ -7,19 +7,15 @@ module Appium::Capybara
     end
 
     def value
-      native[:value]
-    end
-
-    def text
-      native[:text]
+      native.value
     end
 
     def label
-      native[:label]
+      native.label
     end
 
     def name
-      native[:name]
+      native.name
     end
 
     def set(value)
@@ -39,6 +35,10 @@ module Appium::Capybara
       action = Appium::TouchAction.new
       action.long_press(element: native, duration: 2000)
       action.perform
+    end
+
+    def tag_name
+      native.tag_name
     end
 
     def visible?

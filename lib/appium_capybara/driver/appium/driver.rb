@@ -23,6 +23,10 @@ module Appium::Capybara
       !@browser.nil?
     end
 
+    def reset!
+      # TODO: What do we want to do here?
+    end
+
     def wait?
       false
     end

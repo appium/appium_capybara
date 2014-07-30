@@ -1,14 +1,10 @@
 module Capybara
   class Session
-    attr_reader :touched
-    alias_method :touched?, :touched
-
     def reset!
-      return if Capybara.default_driver == :poltergeist
-      if @touched
+      # Next line is a work around for issue https://github.com/jnicklas/capybara/issues/1237
+      if @touched && driver.browser_initialized?
         driver.reset!
-        # This is ugly and i know it
-        assert_no_selector(:xpath, "/html/body/*") unless driver.instance_of?(Appium::Capybara::Driver)
+        assert_no_selector(:xpath, "/html/body/*")
         @touched = false
       end
       raise_server_error!
