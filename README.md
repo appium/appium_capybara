@@ -1,4 +1,4 @@
-# appium_capybara  [![Gem Version](https://badge.fury.io/rb/appium_capybara.svg)](http://badge.fury.io/rb/appium_capybara)[![Dependency Status](https://gemnasium.com/appium/appium_capybara.svg)](https://gemnasium.com/appium/appium_capybara)
+# appium_capybara  [![Gem Version](https://badge.fury.io/rb/appium_capybara.svg)](http://badge.fury.io/rb/appium_capybara)
 
 
 Gem enabling appium support in capybara
