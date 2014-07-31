@@ -1,5 +1,11 @@
 require_relative 'lib/appium_capybara/version'
 
+class Gem::Specification
+  def remove_zip_files array
+    array.reject { |e| File.extname(e).downcase == '.zip' }
+  end
+end
+
 Gem::Specification.new do |s|
   # 1.8.x is not supported
   s.required_ruby_version = '>= 1.9.3'
@@ -19,5 +25,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'appium_thor', '~> 0.0', '>= 0.0.6'
 
-  s.files = `git ls-files`.split "\n"
+  s.files = s.remove_zip_files(`git ls-files`.split("\n"))
 end
