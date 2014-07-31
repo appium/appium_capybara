@@ -1,4 +1,4 @@
-require_relative 'lib/appium_capybara/common/version'
+require_relative 'lib/appium_capybara/version'
 
 Gem::Specification.new do |s|
   # 1.8.x is not supported
