@@ -1,10 +1,10 @@
-appium_capybara
-===============
+# appium_capybara
 
 Gem enabling appium support in capybara
 
-##Driver Setup
+## Driver Setup
 Set up the appium_capybara driver by running this before starting your test.
+
 ```ruby
 desired_caps_ios = {
   platform:        "Mac",
@@ -26,3 +26,8 @@ Capybara.register_driver(:appium) do |app|
 end  
 Capybara.default_driver = :appium
 ```
+
+## Publishing to rubygems
+
+Make sure to run `thor bump` or manually modify version.rb before publishing. RubyGems will not allow the same
+version to be published twice. After the version is bumped, run `thor publish`
