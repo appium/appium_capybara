@@ -7,6 +7,8 @@ Gem enabling appium support in capybara
 Set up the appium_capybara driver by running this before starting your test.
 
 ```ruby
+require 'appium_capybara'
+
 desired_caps_ios = {
   platform:        "Mac",
   deviceName:      "iPhone Simulator",
@@ -14,7 +16,9 @@ desired_caps_ios = {
   platformVersion: "7.1",
   app:             "full/path/to/app.zip"
 }
+
 url = "http://localhost:4723/wd/hub" # or a sauce labs url
+
 Capybara.register_driver(:appium) do |app|
     appium_lib_options = {
       server_url:           url
@@ -24,7 +28,8 @@ Capybara.register_driver(:appium) do |app|
       caps:        desired_caps_ios
     }
     Appium::Capybara::Driver.new app, all_options
-end  
+end
+
 Capybara.default_driver = :appium
 ```
 
