@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.license       = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
   s.description   = s.summary = 'Enables appium support in Capybara'
   s.description   += '.' # avoid identical warning
-  s.authors       = s.email = ['sbonebrake@yammer-inc.com', 'code@bootstraponline.com']
+  s.authors       = s.email = ['scott.bonebrake@gmail.com', 'code@bootstraponline.com']
   s.homepage      = 'https://github.com/appium/appium_capybara'
   s.require_paths = ['lib']
 
