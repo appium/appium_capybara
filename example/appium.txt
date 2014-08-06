@@ -2,6 +2,7 @@
 platformName = "ios"
 deviceName ="iPhone Simulator"
 app = "./UICatalog.app.zip"
+platformVersion = "7.1"
 
 [appium_lib]
 sauce_username = ""

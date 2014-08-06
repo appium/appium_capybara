@@ -24,7 +24,7 @@ module Appium::Capybara
     end
 
     def reset!
-      # TODO: What do we want to do here?
+      browser.driver.reset
     end
 
     def wait?
