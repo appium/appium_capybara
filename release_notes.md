@@ -1,3 +1,13 @@
+#### v0.0.3 2014-08-06
+
+- [ee4a9bd](https://github.com/appium/appium_capybara/commit/ee4a9bdab696e5e516ee92d7a9db1e325940fcaf) Release 0.0.3
+- [78734bc](https://github.com/appium/appium_capybara/commit/78734bc69e29a9d17291b0a0e5b3aef5695e169d) Merge branch 'master' of https://github.com/appium/appium_capybara
+- [30eeaea](https://github.com/appium/appium_capybara/commit/30eeaea5d7e10d998bc1cf9cf2e0dfebfd368fe7) Added driver.reset! functionality
+- [3f06e02](https://github.com/appium/appium_capybara/commit/3f06e02266e51dd41461f4ed89187addb31b6de6) Update appium_thor to 0.0.7
+- [5e98434](https://github.com/appium/appium_capybara/commit/5e9843433379b3347f1e50b48b66f02f041d432d) Add readme for sample code
+- [a31b5ba](https://github.com/appium/appium_capybara/commit/a31b5ba3c477ecb6ec7b1efb36e46f7f273dbc75) Updated author email
+
+
 #### v0.0.2 2014-08-01
 
 - [de768ce](https://github.com/appium/appium_capybara/commit/de768cecd634f0079867aceb41350ba808423add) Release 0.0.2
