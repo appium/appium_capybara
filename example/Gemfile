@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'appium_capybara', '~> 0.0.1'
+gem 'appium_capybara', '~> 0.0.2'
 gem 'rspec', '~> 3.0.0'
 gem 'site_prism', '~> 2.6'
