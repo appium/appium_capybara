@@ -51,6 +51,16 @@ module Appium::Capybara
       @browser = nil
     end
 
+    def current_url
+      raise NotImplementedError,
+        "Appium::Capybara::Driver does not support current_url because it does not apply to mobile applications"
+    end
+
+    def visit(path)
+      raise NotImplementedError,
+        "Appium::Capybara::Driver does not support visit(path) because it does not apply to mobile applications"
+    end
+
     def dismiss_alert
       browser.alert_dismiss
     end
