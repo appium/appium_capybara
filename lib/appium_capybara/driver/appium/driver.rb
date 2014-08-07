@@ -1,6 +1,7 @@
 module Appium::Capybara
   class Appium::Capybara::Driver < Capybara::Driver::Base
     DEFAULT_OPTIONS = {
+        start_capybara_server: false
     }
 
     attr_reader :app, :options
@@ -70,6 +71,11 @@ module Appium::Capybara
     # Use :landscape or :portrait
     def rotate(opts)
       browser.driver.rotate opts
+    end
+
+    # Tell Capybara to start a web server
+    def needs_server?
+      @options[:start_capybara_server]
     end
   end
 end
