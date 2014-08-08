@@ -1,10 +1,12 @@
 module Appium::Capybara
   class Appium::Capybara::Driver < Capybara::Driver::Base
-    DEFAULT_OPTIONS = {
+    DEFAULT_DRIVER_OPTIONS = {
         start_capybara_server: false
     }
+    DEFAULT_OPTIONS = {
+    }
 
-    attr_reader :app, :options
+    attr_reader :app, :options, :driver_options
 
     def browser
       unless @browser
@@ -17,6 +19,7 @@ module Appium::Capybara
 
     def initialize(app, options = {})
       @app = app
+      @driver_options = DEFAULT_DRIVER_OPTIONS.merge(options.delete(:driver_options) || {})
       @options = DEFAULT_OPTIONS.merge(options)
     end
 
@@ -85,7 +88,7 @@ module Appium::Capybara
 
     # Tell Capybara to start a web server
     def needs_server?
-      @options[:start_capybara_server]
+      @driver_options[:start_capybara_server]
     end
   end
 end

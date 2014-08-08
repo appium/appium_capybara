@@ -34,12 +34,18 @@ Capybara.default_driver = :appium
 ```
 
 ## Start Capybara server
+appium_capybara driver currently accept one option which allow you to control if Capybara should automatically
+start a test web server or not. It defaults to false.
 To tell Capybara to automatically start its testing server simply set the option `start_capybara_server` to `true`
 
 ```ruby
+driver_options = {
+  start_capybara_server: true
+}
+
 Capybara.register_driver(:appium) do |app|
     all_options = {
-      start_capybara_server: true,
+      driver_options: driver_options,
       appium_lib:  appium_lib_options,
       caps:        desired_caps_ios
     }
