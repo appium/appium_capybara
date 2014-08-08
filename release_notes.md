@@ -1,3 +1,9 @@
+#### v0.0.4 2014-08-07
+
+- [16061f4](https://github.com/appium/appium_capybara/commit/16061f43ef4ac0796bc05f9d4af9e22e58d769e1) Release 0.0.4
+- [be07877](https://github.com/appium/appium_capybara/commit/be078778c265a6483c54290e87baff786312f495) Fixed crash that sometimes occurs in session.reset! and added better error messages for driver's visit and current_url methods
+
+
 #### v0.0.3 2014-08-06
 
 - [ee4a9bd](https://github.com/appium/appium_capybara/commit/ee4a9bdab696e5e516ee92d7a9db1e325940fcaf) Release 0.0.3
