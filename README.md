@@ -33,30 +33,12 @@ end
 Capybara.default_driver = :appium
 ```
 
-## Start Capybara server
-appium_capybara driver currently accept one option which allow you to control if Capybara should automatically
-start a test web server or not. It defaults to false.
-To tell Capybara to automatically start its testing server simply set the option `start_capybara_server` to `true`
+## Capybara server
+appium_capybara driver automatically starts a Rails server in `test` environment.
 
-```ruby
-driver_options = {
-  start_capybara_server: true
-}
-
-Capybara.register_driver(:appium) do |app|
-    all_options = {
-      driver_options: driver_options,
-      appium_lib:  appium_lib_options,
-      caps:        desired_caps_ios
-    }
-    Appium::Capybara::Driver.new app, all_options
-end
-
-Capybara.default_driver = :appium
-```
-
-It is advised to force Capybara to listen to all interface and listen to a specific port, so your mobile
-application can connect to Capybara's test server
+By default Capybara starts this web server listening to localhost only and on a random port. It is advised
+to force Capybara to listen to all interface and listen to a specific port, and set this server address
+in your mobile application.
 
 ```ruby
 Capybara.server_host = '0.0.0.0' # Listen to all interfaces
