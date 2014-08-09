@@ -4,6 +4,9 @@ module Appium::Capybara
   class Appium::Capybara::Driver < Capybara::Selenium::Driver
 
     # override
+    #
+    # Creates and starts a new appium driver.
+    # To access the browser without creating one use @browser
     def browser
       unless @browser
         @browser = Appium::Driver.new @options
