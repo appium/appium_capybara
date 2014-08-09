@@ -33,6 +33,18 @@ end
 Capybara.default_driver = :appium
 ```
 
+## Capybara server
+appium_capybara driver automatically starts a Rails server in `test` environment.
+
+By default Capybara starts this web server listening to localhost only and on a random port. It is advised
+to force Capybara to listen to all interface and listen to a specific port, and set this server address
+in your mobile application.
+
+```ruby
+Capybara.server_host = '0.0.0.0' # Listen to all interfaces
+Capybara.server_port = 56844     # Open port TCP 56844, change at your convenience
+```
+
 ## Publishing to rubygems
 
 Make sure to run `thor bump` or manually modify version.rb before publishing. RubyGems will not allow the same
