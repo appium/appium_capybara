@@ -27,12 +27,12 @@ module Appium::Capybara
     def reset!
       # invoking the browser method after the browser has closed will cause it to relaunch
       # use @browser to avoid the relaunch.
-      @browser.driver.reset
+      @browser.driver.reset if @browser
     end
 
     # new
     def browser_initialized?
-      !browser.nil?
+      !! @browser
     end
 
     # new
