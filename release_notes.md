@@ -1,3 +1,12 @@
+#### v0.1.0 2014-08-08
+
+- [bdd66a2](https://github.com/appium/appium_capybara/commit/bdd66a2dc3a10fa2f8211b61d3b4ea8ef1315155) Release 0.1.0
+- [fc263fb](https://github.com/appium/appium_capybara/commit/fc263fb315cc5265d5c08e8e19796470dc74b124) Merge pull request #10 from randoum/master
+- [fadc4be](https://github.com/appium/appium_capybara/commit/fadc4be5684f4216c3773f6115c27db8f81878dc) Minor fixes
+- [b919826](https://github.com/appium/appium_capybara/commit/b91982622ac7e1a5c86e04d8783b3bcaa613f712) Merge pull request #8 from appium/capybara_selenium_driver
+- [068e298](https://github.com/appium/appium_capybara/commit/068e29830ec0b906e348d745ed80375fa4a27416) Inherit from Capybara::Selenium::Driver
+
+
 #### v0.0.4 2014-08-07
 
 - [16061f4](https://github.com/appium/appium_capybara/commit/16061f43ef4ac0796bc05f9d4af9e22e58d769e1) Release 0.0.4
