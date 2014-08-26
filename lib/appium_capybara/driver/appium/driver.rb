@@ -64,6 +64,11 @@ module Appium::Capybara
       browser.driver.rotate opts
     end
 
+    # override
+    def save_screenshot(path)
+      browser.screenshot(path)
+    end
+
     # new
     def find_custom(finder, locator)
       browser.find_elements(finder, locator).map { |node| Appium::Capybara::Node.new(self, node) }
