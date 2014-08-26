@@ -1,3 +1,11 @@
+#### v0.1.1 2014-08-26
+
+- [cdc855c](https://github.com/appium/appium_capybara/commit/cdc855c509d514f3bb934d31aff6846e70dddc3b) Release 0.1.1
+- [3529415](https://github.com/appium/appium_capybara/commit/3529415cf0bff0c895e37d19478b4701d22f8bc0) Merge pull request #12 from maudineormsby/fix/screenshot
+- [4a6810e](https://github.com/appium/appium_capybara/commit/4a6810e0b7ca7aa647ee57816969d5d5dcca0369) Make save_screenshot proxy commands to appium_lib screenshot command.
+- [e854518](https://github.com/appium/appium_capybara/commit/e8545180ab31c67236716f5cefd4db33dbd234ec) Add note about browser vs @browser
+
+
 #### v0.1.0 2014-08-08
 
 - [bdd66a2](https://github.com/appium/appium_capybara/commit/bdd66a2dc3a10fa2f8211b61d3b4ea8ef1315155) Release 0.1.0
