@@ -1,3 +1,10 @@
+#### v0.1.2 2014-08-27
+
+- [8267412](https://github.com/appium/appium_capybara/commit/8267412930b7ea69e00fccd233254a04c4a6f885) Release 0.1.2
+- [801d9c8](https://github.com/appium/appium_capybara/commit/801d9c8c43cf35347dfb79c1d9610c703f4e6702) Merge pull request #13 from maudineormsby/fix/screenshot
+- [26a2140](https://github.com/appium/appium_capybara/commit/26a21405a0cf590fe5037a40bbcd81f869474b03) Screenshot needs to accept an options hash.
+
+
 #### v0.1.1 2014-08-26
 
 - [cdc855c](https://github.com/appium/appium_capybara/commit/cdc855c509d514f3bb934d31aff6846e70dddc3b) Release 0.1.1
