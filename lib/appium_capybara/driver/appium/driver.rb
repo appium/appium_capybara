@@ -65,8 +65,9 @@ module Appium::Capybara
     end
 
     # override
-    def save_screenshot(path)
-      browser.screenshot(path)
+    # Capybara always passes an options param but appium_lib can't do anything with it.
+    def save_screenshot(path, options = {})
+      browser.screenshot path
     end
 
     # new
