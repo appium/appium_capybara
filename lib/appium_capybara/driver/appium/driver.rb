@@ -3,34 +3,44 @@ module Appium::Capybara
   # or they're new and specific to appium.
   class Appium::Capybara::Driver < Capybara::Selenium::Driver
 
+    # new
+    #
+    # starts new driver
+    def appium_driver
+      # must use self to reference the 'browser' method
+      self.browser unless @appium_driver
+
+      @appium_driver
+    end
+
     # override
     #
     # Creates and starts a new appium driver.
     # To access the browser without creating one use @browser
     def browser
       unless @browser
-        @browser = Appium::Driver.new @options
-        # This will fail if your appium didn't close its last session
-        @browser.start_driver
+        @appium_driver = Appium::Driver.new @options
+        # browser is the standard selenium driver without any appium methods
+        @browser = @appium_driver.start_driver
       end
       @browser
     end
 
     # override
     def find_xpath(selector)
-      browser.find_elements(:xpath, selector).map { |node| Appium::Capybara::Node.new(self, node) }
+      appium_driver.find_elements(:xpath, selector).map { |node| Appium::Capybara::Node.new(self, node) }
     end
 
     # override
     def find_css(selector)
-      browser.find_elements(:css, selector).map { |node| Appium::Capybara::Node.new(self, node) }
+      appium_driver.find_elements(:css, selector).map { |node| Appium::Capybara::Node.new(self, node) }
     end
 
     # override
     def reset!
       # invoking the browser method after the browser has closed will cause it to relaunch
-      # use @browser to avoid the relaunch.
-      @browser.driver.reset if @browser
+      # use @appium_driver to avoid the relaunch.
+      @appium_driver.reset if @appium_driver
     end
 
     # new
@@ -40,48 +50,49 @@ module Appium::Capybara
 
     # new
     def dismiss_alert
-      browser.alert_dismiss
+      appium_driver.alert_dismiss
     end
 
     # new
     def accept_alert
-      browser.alert_accept
+      appium_driver.alert_accept
     end
 
     # new
     def scroll_up
-      browser.driver.execute_script("mobile: scroll", direction: "up")
+      browser.execute_script("mobile: scroll", direction: "up")
     end
 
     # new
     def scroll_down
-      browser.driver.execute_script("mobile: scroll", direction: "down")
+      browser.execute_script("mobile: scroll", direction: "down")
     end
 
     # new
     # Use :landscape or :portrait
     def rotate(opts)
-      browser.driver.rotate opts
+      browser.rotate opts
     end
 
     # override
     # Capybara always passes an options param but appium_lib can't do anything with it.
     def save_screenshot(path, options = {})
-      browser.screenshot path
+      appium_driver.screenshot path
     end
 
     # new
     def find_custom(finder, locator)
-      browser.find_elements(finder, locator).map { |node| Appium::Capybara::Node.new(self, node) }
+      appium_driver.find_elements(finder, locator).map { |node| Appium::Capybara::Node.new(self, node) }
     end
 
     # override
     def quit
-      @browser.driver_quit if @browser
+      @appium_driver.driver_quit if @browser || @appium_driver
     rescue Errno::ECONNREFUSED
       # Browser must have already gone
     ensure
       @browser = nil
+      @appium_driver = nil
     end
 
   end # Appium::Capybara::Driver < Capybara::Selenium::Driver
