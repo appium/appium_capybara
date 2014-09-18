@@ -1,3 +1,10 @@
+#### v1.0.0 2014-09-17
+
+- [63e9f31](https://github.com/appium/appium_capybara/commit/63e9f319906f2ce7cda0fde8a2fc00363c7d890b) Release 1.0.0
+- [fe8f229](https://github.com/appium/appium_capybara/commit/fe8f2291a312db93a46a841ec1f5bc8be5ad8f07) Merge pull request #14 from appium/selenium_driver
+- [9f31f17](https://github.com/appium/appium_capybara/commit/9f31f173aa58436bd1bbacaa77d28754dede31e0) Use selenium driver by default
+
+
 #### v0.1.2 2014-08-27
 
 - [8267412](https://github.com/appium/appium_capybara/commit/8267412930b7ea69e00fccd233254a04c4a6f885) Release 0.1.2
