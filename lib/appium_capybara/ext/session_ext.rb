@@ -1,8 +1,10 @@
 module Capybara
   class Session
     def reset!
-      # Next line is a work around for issue https://github.com/jnicklas/capybara/issues/1237
-      if @touched && driver.browser_initialized?
+      # Work around for issue https://github.com/jnicklas/capybara/issues/1237
+      browser_initialized = driver.respond_to?(:browser_initialized?) ? driver.browser_initialized? : true
+
+      if @touched && browser_initialized
         driver.reset!
         # Ugly hack to not run this assertion for Appium
         assert_no_selector(:xpath, "/html/body/*") unless driver.instance_of? Appium::Capybara::Driver
