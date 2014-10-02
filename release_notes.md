@@ -1,3 +1,12 @@
+#### v1.1.0 2014-10-02
+
+- [88f6b44](https://github.com/appium/appium_capybara/commit/88f6b441e7e3da381a4d48b852bf5b00b04f6a7e) Release 1.1.0
+- [b1decb5](https://github.com/appium/appium_capybara/commit/b1decb5d14a4a26ece6e857fb0a8430e8d4db5a4) Merge pull request #17 from appium/inherit_selenium_node
+- [96c72dd](https://github.com/appium/appium_capybara/commit/96c72dd91f23e138be32bcf98bc7e2b9b17a2a6c) Change appium node to inherit from selenium
+- [a5c95e5](https://github.com/appium/appium_capybara/commit/a5c95e5b8e238d5305fae11db6a9e9982fcb4e6a) Create contributing.md
+- [05b7275](https://github.com/appium/appium_capybara/commit/05b72756d0eadcac195c32221406ed651ac2de0d) Document how to use with Pry
+
+
 #### v1.0.0 2014-09-17
 
 - [63e9f31](https://github.com/appium/appium_capybara/commit/63e9f319906f2ce7cda0fde8a2fc00363c7d890b) Release 1.0.0
