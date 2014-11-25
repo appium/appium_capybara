@@ -48,13 +48,15 @@ module Appium::Capybara
       !! @browser
     end
 
-    # new
-    def dismiss_alert
+    # override
+    # type and options are passed but can be ignored.
+    def dismiss_modal(type, options={}, &blk)
       appium_driver.alert_dismiss
     end
 
-    # new
-    def accept_alert
+    # override
+    # type and options are passed but can be ignored.
+    def accept_modal(type, options={}, &blk)
       appium_driver.alert_accept
     end
 
