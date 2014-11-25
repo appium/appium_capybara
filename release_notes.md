@@ -1,3 +1,12 @@
+#### v1.2.0 2014-11-24
+
+- [7c8f2c2](https://github.com/appium/appium_capybara/commit/7c8f2c238059b715488b482415f58f7021f05012) Release 1.2.0
+- [6dc2f67](https://github.com/appium/appium_capybara/commit/6dc2f6767d7781b9db8fd84fb7a7e2b130548faa) Merge pull request #18 from maudineormsby/fix/modal_accept
+- [842ae0e](https://github.com/appium/appium_capybara/commit/842ae0e9d6aeba4440c0e995663133da1f450bc4) Rename accept/dismiss modal methods.
+- [ef8acaa](https://github.com/appium/appium_capybara/commit/ef8acaa50f70c2edc88d5b7f107769c0151b6aed) Merge pull request #15 from randoum/master
+- [9c765e6](https://github.com/appium/appium_capybara/commit/9c765e611fb917f40d4f116aa3414cf603e4c878) Allow to use different drivers in the same test suite
+
+
 #### v1.1.0 2014-10-02
 
 - [88f6b44](https://github.com/appium/appium_capybara/commit/88f6b441e7e3da381a4d48b852bf5b00b04f6a7e) Release 1.1.0
