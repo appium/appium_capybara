@@ -1,3 +1,12 @@
+#### v1.2.1 2014-12-29
+
+- [57ad02c](https://github.com/appium/appium_capybara/commit/57ad02c3aac2c34f5710149bff6ea92d5309d421) Release 1.2.1
+- [1ab8564](https://github.com/appium/appium_capybara/commit/1ab856478e7495347dbbd5d2737c9cc55106b3bf) Release 1.2.1
+- [97de881](https://github.com/appium/appium_capybara/commit/97de8812b54d84d2a4681672c436f06609080334) Loosen restriction on ruby_lib version
+- [691164f](https://github.com/appium/appium_capybara/commit/691164f033e6b952ca1fe2ce131a40c76c03e825) Update contributing.md
+- [36233a8](https://github.com/appium/appium_capybara/commit/36233a866dfdac59fab56ea613cce6d766b5718c) Add maudineormsby to gem owner list
+
+
 #### v1.2.0 2014-11-24
 
 - [7c8f2c2](https://github.com/appium/appium_capybara/commit/7c8f2c238059b715488b482415f58f7021f05012) Release 1.2.0
