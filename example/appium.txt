@@ -1,8 +1,8 @@
 [caps]
 platformName = "ios"
-deviceName ="iPhone Simulator"
+deviceName ="iPhone 6"
 app = "./UICatalog.app.zip"
-platformVersion = "7.1"
+platformVersion = "8.1"
 
 [appium_lib]
 sauce_username = ""
