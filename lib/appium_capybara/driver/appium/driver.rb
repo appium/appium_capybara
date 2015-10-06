@@ -22,6 +22,14 @@ module Appium::Capybara
         @appium_driver = Appium::Driver.new @options
         # browser is the standard selenium driver without any appium methods
         @browser = @appium_driver.start_driver
+
+        main = Process.pid
+        at_exit do
+          # Store the exit status of the test run since it goes away after calling the at_exit proc...
+          @exit_status = $!.status if $!.is_a?(SystemExit)
+          quit if Process.pid == main
+          exit @exit_status if @exit_status # Force exit with stored status
+        end
       end
       @browser
     end
@@ -79,7 +87,7 @@ module Appium::Capybara
     # override
     # Capybara always passes an options param but appium_lib can't do anything with it.
     def save_screenshot(path, options = {})
-      appium_driver.screenshot path
+      appium_driver.screenshot path if @appium_driver
     end
 
     # new
