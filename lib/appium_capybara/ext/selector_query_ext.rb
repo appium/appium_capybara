@@ -8,7 +8,7 @@ class Capybara::Queries::SelectorQuery < Capybara::Queries::BaseQuery
       elsif selector.format == :xpath
         node.find_xpath(xpath(exact))
       else
-        node.find_custom(selector.format, locator)
+        node.find_custom(selector.format, @expression)
       end.map do |child|
         if node.is_a?(Capybara::Node::Base)
           Capybara::Node::Element.new(node.session, child, node, self)
