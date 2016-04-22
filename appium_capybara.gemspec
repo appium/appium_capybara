@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'appium_lib', '>= 4.1.0'
-  s.add_runtime_dependency 'capybara', '~> 2.4', '>= 2.4.1'
+  s.add_runtime_dependency 'capybara', '~> 2.7'
 
   s.add_development_dependency 'appium_thor', '~> 0.0', '>= 0.0.7'
 

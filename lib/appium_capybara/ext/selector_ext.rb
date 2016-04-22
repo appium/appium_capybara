@@ -1,20 +1,10 @@
 module Capybara
   class Selector
+
     def custom(f, &block)
-      @format = f
-      @custom = block if block
-      @custom
+      @format, @expression = f, block if block
     end
 
-    def call(locator)
-      if @format == :css
-        @css.call(locator)
-      elsif @format == :xpath
-        @xpath.call(locator)
-      else
-        @custom.call(locator)
-      end
-    end
   end
 end
 

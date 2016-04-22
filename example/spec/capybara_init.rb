@@ -1,5 +1,6 @@
-require 'appium_capybara'
 require 'rspec'
+require 'capybara/rspec'
+require 'appium_capybara'
 require 'site_prism'
 
 Capybara.register_driver(:appium) do |app|
