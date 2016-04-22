@@ -1,6 +1,20 @@
+#### v1.3.0 2016-04-22
+
+- [9a2517c](https://github.com/appium/appium_capybara/commit/9a2517c7797ae1719a4ef91b0db939b11e9af2e5) Release 1.3.0
+- [30496b0](https://github.com/appium/appium_capybara/commit/30496b00cdca96a98c87a7987b03f396d42f9584) Release 1.3.0
+- [e77c23b](https://github.com/appium/appium_capybara/commit/e77c23b5806e3de20a813edb93a0c386e14c2c68) Capybara 2.7 support
+- [6e43a9e](https://github.com/appium/appium_capybara/commit/6e43a9e77e8e7186b45a9a7c9650ab4a5af750e8) End file appium_capybara.rb with new line
+- [a1d776d](https://github.com/appium/appium_capybara/commit/a1d776d1b89aff5a0c340f58ec2df062989b70e0) Fix for wrong attribute used in resolve_for
+- [0aa208b](https://github.com/appium/appium_capybara/commit/0aa208be11e78d82f3fec4011daec13c71d588fa) Update extensions of Capybara classes to support version 2.7
+- [834d0b1](https://github.com/appium/appium_capybara/commit/834d0b1a15b2f447a8ba10ef2f5d93f62a6f29e6) Merge pull request #25 from appium/fix_query
+- [a68a6f3](https://github.com/appium/appium_capybara/commit/a68a6f3f0247c056c2475982ab18aba57783e34c) Query extension now uses expression instead of locator
+- [7695c14](https://github.com/appium/appium_capybara/commit/7695c141aef4635923317980916ee8b263b47acd) Merge pull request #24 from vgrigoruk/master
+- [580a476](https://github.com/appium/appium_capybara/commit/580a4769fc1ce2d631cc2b59598f007e4a3f63d3) make sure app is running when making a screenshot. Auto-quit driver when test session ends
+- [697a000](https://github.com/appium/appium_capybara/commit/697a0004930d1d74e19b6b6603b58300845aaa7c) Update example for iOS 8
+
+
 #### v1.2.1 2014-12-29
 
-- [57ad02c](https://github.com/appium/appium_capybara/commit/57ad02c3aac2c34f5710149bff6ea92d5309d421) Release 1.2.1
 - [1ab8564](https://github.com/appium/appium_capybara/commit/1ab856478e7495347dbbd5d2737c9cc55106b3bf) Release 1.2.1
 - [97de881](https://github.com/appium/appium_capybara/commit/97de8812b54d84d2a4681672c436f06609080334) Loosen restriction on ruby_lib version
 - [691164f](https://github.com/appium/appium_capybara/commit/691164f033e6b952ca1fe2ce131a40c76c03e825) Update contributing.md
