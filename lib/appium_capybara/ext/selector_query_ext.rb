@@ -1,14 +1,15 @@
-class Capybara::Query < Capybara::Queries::BaseQuery
+class Capybara::Queries::SelectorQuery < Capybara::Queries::BaseQuery
+
   # @api private
   def resolve_for(node, exact = nil)
     node.synchronize do
       children = if selector.format == :css
-                   node.find_css(css)
-                 elsif selector.format == :xpath
-                   node.find_xpath(xpath(exact))
-                 else
-                   node.find_custom(selector.format, @expression)
-                 end.map do |child|
+        node.find_css(css)
+      elsif selector.format == :xpath
+        node.find_xpath(xpath(exact))
+      else
+        node.find_custom(selector.format, locator)
+      end.map do |child|
         if node.is_a?(Capybara::Node::Base)
           Capybara::Node::Element.new(node.session, child, node, self)
         else
@@ -18,4 +19,5 @@ class Capybara::Query < Capybara::Queries::BaseQuery
       Capybara::Result.new(children, self)
     end
   end
+
 end
