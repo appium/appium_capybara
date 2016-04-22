@@ -1,6 +1,6 @@
 module Appium
   module Capybara
-    VERSION = '1.2.1' unless defined? ::Appium::Capybara::VERSION
-    DATE    = '2014-12-29' unless defined? ::Appium::Capybara::DATE
+    VERSION = '1.3.0' unless defined? ::Appium::Capybara::VERSION
+    DATE    = '2016-04-22' unless defined? ::Appium::Capybara::DATE
   end
 end
