@@ -1,3 +1,11 @@
+#### v1.4.0 2017-09-19
+
+- [9af61c9](https://github.com/appium/appium_capybara/commit/9af61c934208f3cd08baa91ef46d3d0e95f2b3bb) Release 1.4.0
+- [4589baa](https://github.com/appium/appium_capybara/commit/4589baab0e33591868ccae8949630fdf3aea41bb) Merge pull request #31 from KazuCocoa/use_new_appium_driver
+- [b79a578](https://github.com/appium/appium_capybara/commit/b79a578b0ff4cafda09bed17889b7353ed5f4441) revert path
+- [f8f7f4c](https://github.com/appium/appium_capybara/commit/f8f7f4c848e90bb02afcd7f9ae6eac0c8231c1df) use the latest driver update appium.txt
+
+
 #### v1.3.0 2016-04-22
 
 - [9a2517c](https://github.com/appium/appium_capybara/commit/9a2517c7797ae1719a4ef91b0db939b11e9af2e5) Release 1.3.0
