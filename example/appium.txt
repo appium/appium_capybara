@@ -1,9 +1,6 @@
 [caps]
 platformName = "ios"
-deviceName ="iPhone 6"
+platformVersion = "10.3"
+deviceName ="iPhone Simulator"
+automationName = 'XCUITest'
 app = "./UICatalog.app.zip"
-platformVersion = "8.1"
-
-[appium_lib]
-sauce_username = ""
-sauce_access_key = ""

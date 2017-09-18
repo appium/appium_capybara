@@ -19,7 +19,7 @@ module Appium::Capybara
     # To access the browser without creating one use @browser
     def browser
       unless @browser
-        @appium_driver = Appium::Driver.new @options
+        @appium_driver = Appium::Driver.new @options, false
         # browser is the standard selenium driver without any appium methods
         @browser = @appium_driver.start_driver
 

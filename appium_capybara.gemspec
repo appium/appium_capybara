@@ -7,8 +7,7 @@ class Gem::Specification
 end
 
 Gem::Specification.new do |s|
-  # 1.8.x is not supported
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.2'
 
   s.name          = 'appium_capybara'
   s.version       = Appium::Capybara::VERSION
@@ -20,7 +19,7 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/appium/appium_capybara'
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'appium_lib', '>= 4.1.0'
+  s.add_runtime_dependency 'appium_lib', '>= 9.6.0'
   s.add_runtime_dependency 'capybara', '~> 2.7'
 
   s.add_development_dependency 'appium_thor', '~> 0.0', '>= 0.0.7'
