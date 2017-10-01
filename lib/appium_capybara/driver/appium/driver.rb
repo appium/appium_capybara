@@ -51,7 +51,7 @@ module Appium::Capybara
       @appium_driver.reset if @appium_driver
     end
 
-    # new
+    # @deprecated This method is being removed
     def browser_initialized?
       !! @browser
     end
