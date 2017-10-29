@@ -1,3 +1,14 @@
+#### v1.4.1 2017-10-29
+
+- [b022ae9](https://github.com/appium/appium_capybara/commit/b022ae95801cd0764ee26e7883de5c1b8c0f7905) Release 1.4.1
+- [aa02326](https://github.com/appium/appium_capybara/commit/aa023262998be02fca83d861f2a8dbfc0069d696) Merge pull request #34 from KazuCocoa/turn_global_driver_off
+- [afc948e](https://github.com/appium/appium_capybara/commit/afc948e76e0a9dc6af9b328537a2eb28abf06411) turn global driver in initialise
+- [c0f8471](https://github.com/appium/appium_capybara/commit/c0f847146cbcb19f8deae510f00faa053ca54809) Merge pull request #33 from KazuCocoa/revert_truthy
+- [0c26cc6](https://github.com/appium/appium_capybara/commit/0c26cc6185b8db1f37cf135ad50deede140aa46d) revert except value
+- [c224e6a](https://github.com/appium/appium_capybara/commit/c224e6aa842e3b94f6b205c637898612ec4cbe3c) Merge pull request #32 from KazuCocoa/add_capybara_screenshot_after_hook
+- [3f23a8d](https://github.com/appium/appium_capybara/commit/3f23a8d405053d485245c7c4587e7d995580b20f) add an example for after hook
+
+
 #### v1.4.0 2017-09-19
 
 - [9af61c9](https://github.com/appium/appium_capybara/commit/9af61c934208f3cd08baa91ef46d3d0e95f2b3bb) Release 1.4.0
