@@ -1,9 +1,5 @@
 module Appium::Capybara
   class Appium::Capybara::Node < Capybara::Selenium::Node
-    def value
-      native.value
-    end
-
     def label
       native.label
     end
@@ -12,13 +8,10 @@ module Appium::Capybara
       native.name
     end
 
+    # Override
     def set(value)
       native.clear
       send_keys(value)
-    end
-
-    def send_keys(value)
-      native.send_keys(value.to_s)
     end
 
     def long_press
