@@ -1,3 +1,11 @@
+#### v1.5.0 2018-05-08
+
+- [99963c2](https://github.com/appium/appium_capybara/commit/99963c23e11081f53e82dabd9336a296f1bd5a0a) Release 1.5.0
+- [76fadeb](https://github.com/appium/appium_capybara/commit/76fadeb97c27cd9e33cf9b4548be434c6c07f4a1) Merge pull request #37 from KazuCocoa/apply_capybara_3
+- [f7a4223](https://github.com/appium/appium_capybara/commit/f7a422316f899d744a2a834ee4f01adba4cb6338) remove duplicated methods
+- [b164e73](https://github.com/appium/appium_capybara/commit/b164e7378bf1fecfb0259efe6a31a0728940b656) apply capybara 3
+
+
 #### v1.4.1 2017-10-29
 
 - [b022ae9](https://github.com/appium/appium_capybara/commit/b022ae95801cd0764ee26e7883de5c1b8c0f7905) Release 1.4.1
