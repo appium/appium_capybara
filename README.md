@@ -1,7 +1,8 @@
 # appium_capybara  [![Gem Version](https://badge.fury.io/rb/appium_capybara.svg)](http://badge.fury.io/rb/appium_capybara)
 
-
 Gem enabling appium support in capybara
+
+Please use `v1.4.1` for Capybara 2.x users. `v1.5.0` requires Capybara 3.x.
 
 ## Driver Setup
 Set up the appium_capybara driver by running this before starting your test.
