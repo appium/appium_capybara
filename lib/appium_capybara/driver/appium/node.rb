@@ -9,7 +9,7 @@ module Appium::Capybara
     end
 
     # Override
-    def set(value)
+    def set(value, _options = {})
       native.clear
       send_keys(value)
     end
