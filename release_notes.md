@@ -1,3 +1,11 @@
+#### v1.5.1 2018-06-23
+
+- [9ea4945](https://github.com/appium/appium_capybara/commit/9ea49458af7efa54964c5ac1303c29f50d4d7210) Release 1.5.1
+- [7f87aa0](https://github.com/appium/appium_capybara/commit/7f87aa0af5040de7f696c7e40fe69df4dd2a78c0) Merge pull request #39 from rjaros87/patch-1
+- [5b9b516](https://github.com/appium/appium_capybara/commit/5b9b516235d20e7f1b0ef19959a24b764956840b) #38 Update 'set' method due to Capybara changes
+- [53c4923](https://github.com/appium/appium_capybara/commit/53c49235fb5513ebdc3f60b5f673d4a21f08fb35) Update README.md
+
+
 #### v1.5.0 2018-05-08
 
 - [99963c2](https://github.com/appium/appium_capybara/commit/99963c23e11081f53e82dabd9336a296f1bd5a0a) Release 1.5.0
