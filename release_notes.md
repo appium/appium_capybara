@@ -1,3 +1,10 @@
+#### v1.6.0 2018-08-20
+
+- [7b2134d](https://github.com/appium/appium_capybara/commit/7b2134d661d8ba1a0f228759c0579921efe0df79) Release 1.6.0
+- [84eecf3](https://github.com/appium/appium_capybara/commit/84eecf32a9a249c71e1ad80e7f16924ad84dd238) Merge pull request #41 from KazuCocoa/bump-appium
+- [39c855c](https://github.com/appium/appium_capybara/commit/39c855c79de52d3fc3b45415c833a4238f393f0a) Uses appium_lib 9.15.0 and requires selenium-webdriver 3.14.0
+
+
 #### v1.5.1 2018-06-23
 
 - [9ea4945](https://github.com/appium/appium_capybara/commit/9ea49458af7efa54964c5ac1303c29f50d4d7210) Release 1.5.1
