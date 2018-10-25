@@ -20,3 +20,6 @@ end
 Capybara.add_selector(:accessibility_id) do
   custom(:accessibility_id) { |locator| locator }
 end
+Capybara.add_selector(:custom) do
+  custom(:custom) { |locator| locator }
+end
