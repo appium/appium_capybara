@@ -1,3 +1,10 @@
+#### v1.7.0 2018-10-26
+
+- [320144f](https://github.com/appium/appium_capybara/commit/320144fb2a2e8a4f63eb01476430be283a5a4928) Release 1.7.0
+- [c521dda](https://github.com/appium/appium_capybara/commit/c521dda41a22a018d517985c388e01446e2c2845) Merge pull request #42 from aha-oretama/add-feature-custom-selector
+- [c597c29](https://github.com/appium/appium_capybara/commit/c597c2927c4f739f97018a48dcf0ca62dbd7b691) Add custom tag in selector. This is for element-finding-plugins.
+
+
 #### v1.6.0 2018-08-20
 
 - [7b2134d](https://github.com/appium/appium_capybara/commit/7b2134d661d8ba1a0f228759c0579921efe0df79) Release 1.6.0
