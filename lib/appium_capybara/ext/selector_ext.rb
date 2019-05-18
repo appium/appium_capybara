@@ -1,5 +1,5 @@
 module Capybara
-  class Selector
+  class Selector::Definition
 
     def custom(f, &block)
       @format, @expression = f, block if block
