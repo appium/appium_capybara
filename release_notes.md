@@ -1,3 +1,10 @@
+#### v1.8.0 2019-05-18
+
+- [3d83516](https://github.com/appium/appium_capybara/commit/3d835164e59b03469a6250a7688c48d290dccfd2) Release 1.8.0
+- [9663139](https://github.com/appium/appium_capybara/commit/96631399948c6874c6eef84c1063e823c36c459a) require capybara 3.19 (#46)
+- [36d7470](https://github.com/appium/appium_capybara/commit/36d7470efa3e629b1d3df815af73e13618af912e) Fix lib for Capybara 3.19+ (#45)
+
+
 #### v1.7.0 2018-10-26
 
 - [320144f](https://github.com/appium/appium_capybara/commit/320144fb2a2e8a4f63eb01476430be283a5a4928) Release 1.7.0
