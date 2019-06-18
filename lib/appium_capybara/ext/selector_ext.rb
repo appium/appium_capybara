@@ -2,7 +2,7 @@ module Capybara
   class Selector::Definition
 
     def custom(f, &block)
-      @format, @expression = f, block if block
+      @expressions[f] = block if block
     end
 
   end
