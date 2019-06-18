@@ -2,5 +2,5 @@ source 'https://rubygems.org'
 
 gem 'appium_capybara', path: '..'
 gem 'rspec', '~> 3.0.0'
-gem 'site_prism', '~> 2.6'
+gem 'site_prism', '~> 3.0'
 gem 'pry'
