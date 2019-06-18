@@ -8,7 +8,7 @@ module Appium::Capybara
     # starts new driver
     def appium_driver
       # must use self to reference the 'browser' method
-      self.browser unless @appium_driver
+      browser unless @appium_driver
 
       @appium_driver
     end
@@ -18,18 +18,18 @@ module Appium::Capybara
     # Creates and starts a new appium driver.
     # To access the browser without creating one use @browser
     def browser
-      unless @browser
-        @appium_driver = Appium::Driver.new @options, false
-        # browser is the standard selenium driver without any appium methods
-        @browser = @appium_driver.start_driver
+      return @browser if @browser
 
-        main = Process.pid
-        at_exit do
-          # Store the exit status of the test run since it goes away after calling the at_exit proc...
-          @exit_status = $!.status if $!.is_a?(SystemExit)
-          quit if Process.pid == main
-          exit @exit_status if @exit_status # Force exit with stored status
-        end
+      @appium_driver = Appium::Driver.new @options, false
+      # browser is the standard selenium driver without any appium methods
+      @browser = @appium_driver.start_driver
+
+      main = Process.pid
+      at_exit do
+        # Store the exit status of the test run since it goes away after calling the at_exit proc...
+        @exit_status = $ERROR_INFO.status if $ERROR_INFO.is_a?(SystemExit)
+        quit if Process.pid == main
+        exit @exit_status if @exit_status # Force exit with stored status
       end
       @browser
     end
@@ -53,29 +53,29 @@ module Appium::Capybara
 
     # @deprecated This method is being removed
     def browser_initialized?
-      !! @browser
+      !!@browser
     end
 
     # override
     # type and options are passed but can be ignored.
-    def dismiss_modal(type, options={}, &blk)
+    def dismiss_modal(type, options = {}, &blk)
       appium_driver.alert_dismiss
     end
 
     # override
     # type and options are passed but can be ignored.
-    def accept_modal(type, options={}, &blk)
+    def accept_modal(type, options = {}, &blk)
       appium_driver.alert_accept
     end
 
     # new
     def scroll_up
-      browser.execute_script("mobile: scroll", direction: "up")
+      browser.execute_script('mobile: scroll', direction: 'up')
     end
 
     # new
     def scroll_down
-      browser.execute_script("mobile: scroll", direction: "down")
+      browser.execute_script('mobile: scroll', direction: 'down')
     end
 
     # new

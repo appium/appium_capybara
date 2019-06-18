@@ -1,10 +1,8 @@
 module Capybara
   class Selector::Definition
-
     def custom(f, &block)
       @expressions[f] = block if block
     end
-
   end
 end
 

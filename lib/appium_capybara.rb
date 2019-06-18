@@ -1,5 +1,5 @@
-require "appium_lib"
-require "capybara"
+require 'appium_lib'
+require 'capybara'
 require_relative 'appium_capybara/driver/appium/driver'
 require_relative 'appium_capybara/driver/appium/node'
 
