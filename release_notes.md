@@ -1,3 +1,10 @@
+#### v1.8.1 2019-06-23
+
+- [805b248](https://github.com/appium/appium_capybara/commit/805b24839f414c936e408739a871be9df3620fbf) Release 1.8.1
+- [d684bc1](https://github.com/appium/appium_capybara/commit/d684bc1ffe5849d31c4895ba5a47be9d4ca50f08) tweak syntax (#49)
+- [3b10096](https://github.com/appium/appium_capybara/commit/3b100967193128fa04a4ef5cab0e49c38d44f8e8) fix custom format definition (#48)
+
+
 #### v1.8.0 2019-05-18
 
 - [3d83516](https://github.com/appium/appium_capybara/commit/3d835164e59b03469a6250a7688c48d290dccfd2) Release 1.8.0
