@@ -79,8 +79,8 @@ module Appium::Capybara
     end
 
     # new
-    def swipe(start_x, start_y, offset_x=0, offset_y=0, duration=200)
-      Appium::TouchAction.new(browser).swipe(start_x: start_x, start_y: start_y, offset_x: offset_x, offset_y: offset_y, duration: duration).perform
+    def swipe(start_x, start_y, end_x=0, end_y=0, duration=200)
+      Appium::TouchAction.new(browser).swipe(start_x: start_x, start_y: start_y, end_x: end_x, end_y: end_y, duration: duration).perform
     end
 
     # new
