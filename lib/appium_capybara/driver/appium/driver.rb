@@ -79,6 +79,11 @@ module Appium::Capybara
     end
 
     # new
+    def swipe(start_x, start_y, offset_x=0, offset_y=0, duration=200)
+      Appium::TouchAction.new(browser).swipe(start_x: start_x, start_y: start_y, offset_x: offset_x, offset_y: offset_y, duration: duration).perform
+    end
+
+    # new
     # Use :landscape or :portrait
     def rotate(opts)
       browser.rotate opts
