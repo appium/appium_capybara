@@ -1,3 +1,9 @@
+#### v1.9.0 2019-07-11
+
+- [8c42306](https://github.com/appium/appium_capybara/commit/8c423067b4347ab64521f298737e76d1164f9929) Release 1.9.0
+- [ad6df40](https://github.com/appium/appium_capybara/commit/ad6df40144c372dcac538f8f43054bf521f99695) feat: Added swipe feature for android and ios (#50)
+
+
 #### v1.8.1 2019-06-23
 
 - [805b248](https://github.com/appium/appium_capybara/commit/805b24839f414c936e408739a871be9df3620fbf) Release 1.8.1
