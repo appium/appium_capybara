@@ -1,3 +1,10 @@
+#### v1.10.0 2019-11-23
+
+- [2a0a739](https://github.com/appium/appium_capybara/commit/2a0a739685b571ab8d54655f924ed078c45d3bbe) Release 1.10.0
+- [7b3baf1](https://github.com/appium/appium_capybara/commit/7b3baf11af0775935812bcfb5a83d18f1d2c7cb6) for capybara 3.27+ (#55)
+- [541fe41](https://github.com/appium/appium_capybara/commit/541fe419e0cb96cc8ccb9426c72c4774c4f44a09) chore: Update readme and the ios test app (#54)
+
+
 #### v1.9.0 2019-07-11
 
 - [8c42306](https://github.com/appium/appium_capybara/commit/8c423067b4347ab64521f298737e76d1164f9929) Release 1.9.0
