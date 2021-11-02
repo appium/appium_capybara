@@ -86,7 +86,16 @@ module Appium::Capybara
       end_y   = opts.fetch :end_y, 0
       duration = opts.fetch :duration, 200
 
-      Appium::TouchAction.new(browser).swipe(start_x: start_x, start_y: start_y, end_x: end_x, end_y: end_y, duration: duration).perform
+      action_builder = browser.action
+      input = action_builder.pointer_inputs[0]
+      action_builder
+        .move_to_location(start_x, start_y)
+        .pointer_down(:left)
+        .pause(input, duration / 1000)
+        .move_to_location(end_x, end_y)
+        .pause(input, 1)
+        .release
+        .perform
     end
 
     # new
