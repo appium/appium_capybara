@@ -7,7 +7,7 @@ class Gem::Specification
 end
 
 Gem::Specification.new do |s|
-  s.required_ruby_version = '>= 2.2'
+  s.required_ruby_version = '>= 2.6'
 
   s.name          = 'appium_capybara'
   s.version       = Appium::Capybara::VERSION
@@ -19,11 +19,11 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/appium/appium_capybara'
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'appium_lib', '>= 9.15.0'
-  s.add_runtime_dependency 'capybara', '~> 3.27'
+  s.add_runtime_dependency 'appium_lib', '12.0.0.rc4'
+  s.add_runtime_dependency 'capybara', '~> 3.36'
 
   s.add_development_dependency 'appium_thor', '~> 1.1.6'
-  s.add_development_dependency 'pry'
+
 
   s.files = s.remove_zip_files(`git ls-files`.split("\n"))
 end

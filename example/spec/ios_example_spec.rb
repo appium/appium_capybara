@@ -20,5 +20,18 @@ describe 'UICatalog smoke test' do
 
     e = Capybara.current_session.find(:xpath, '//XCUIElementTypeNavigationBar')
     expect(e.find(:class, 'XCUIElementTypeButton').text).to eq('UICatalog')
+
+    Capybara.current_session.driver.appium_driver.back
+
+    capy_driver.swipe({start_x: 100, start_y: 500, end_x: 100, end_y: 200})
+    Capybara.current_session.driver.appium_driver.find_element(:name, 'Text Fields').click
+
+    e = capy_driver.find_custom(:predicate, 'value == "Placeholder text"').first
+    e.send_keys [:shift, :end]
+
+    e = Capybara.current_session.find(:xpath, '//XCUIElementTypeTextField[@value=""]')
+    e.send_keys [:shift, :end]
+
+    expect(e.text).to eq("")
   end
 end

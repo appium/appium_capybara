@@ -67,3 +67,11 @@ capy_driver.appium_driver.hide_keyboard
 
 Make sure to run `thor bump` or manually modify version.rb before publishing. RubyGems will not allow the same
 version to be published twice. After the version is bumped, run `thor publish`
+
+
+## Changelogs
+
+- v2.0.0
+    - Bump base appium_lib version to v12
+    - Bump base capybara version to over 3.36
+    - Support Ruby 2.6+
