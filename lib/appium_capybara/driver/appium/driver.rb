@@ -70,12 +70,30 @@ module Appium::Capybara
 
     # new
     def scroll_up
-      browser.execute_script('mobile: scroll', direction: 'up')
+      window = appium_driver.window_rect
+
+      action_builder = appium_driver.action
+      input = action_builder.pointer_inputs[0]
+      action_builder
+        .move_to_location(window.width / 2, window.height / 10)
+        .pointer_down(:left)
+        .move_to_location(window.width / 2, window.height * 8 / 10)
+        .release
+        .perform
     end
 
     # new
     def scroll_down
-      browser.execute_script('mobile: scroll', direction: 'down')
+      window = appium_driver.window_rect
+
+      action_builder = appium_driver.action
+      input = action_builder.pointer_inputs[0]
+      action_builder
+        .move_to_location(window.width / 2, window.height * 8 / 10)
+        .pointer_down(:left)
+        .move_to_location(window.width / 2, window.height / 10)
+        .release
+        .perform
     end
 
     # new
