@@ -3,7 +3,7 @@
 ```
 cd example
 bundle update
-rspec
+bundle exec rspec spec/ios_example_spec.rb
 ```
 
 # Use with pry
