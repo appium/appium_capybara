@@ -1,5 +1,7 @@
 require_relative 'capybara_init'
 
+# sections
+require_relative 'sheets_section'
 # pages
 require_relative 'home_page'
 
