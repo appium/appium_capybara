@@ -5,6 +5,9 @@ describe 'UICatalog smoke test' do
     home_page = Pages::Home.new
     expect(home_page.navigation_bar.first).to be_truthy
 
+    # Use Capybara::Node::Element element
+    expect(home_page.action_sheets_section.has_buttons?).to be_falsey
+
     expect(Capybara.current_driver).to be :appium
 
     capy_driver = Capybara.current_session.driver
