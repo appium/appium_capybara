@@ -7,23 +7,4 @@ bundle exec rspec spec/ios_example_spec.rb
 ```
 
 # Use with pry
-
-```ruby
-# start a Pry session and paste the following code
-# run from the example folder
-require 'appium_capybara'
-
-Capybara.register_driver(:appium) do |app|
-  opts = Appium.load_appium_txt file: File.join(Dir.pwd, 'appium.txt')
-  Appium::Capybara::Driver.new app, opts
-end
-
-Capybara.default_driver = :appium
-
-capy_driver = Capybara.current_session.driver
-capy_driver.browser
-
-# now driver commands can be invoked
-> capy_driver.go_back
-post /back
-```
+`require 'pry'` and insert `binding.pry` at the line where you want to start Pry session in your test and let the test run
