@@ -36,5 +36,14 @@ describe 'UICatalog smoke test' do
     e.send_keys [:shift, :end]
 
     expect(e.text).to eq("")
+
+
+    Capybara.current_session.driver.appium_driver.back
+
+    sleep 1
+    capy_driver.scroll_down
+    sleep 1
+    capy_driver.scroll_up
+    Capybara.current_session.driver.appium_driver.find_element(:name, 'Text Fields').click
   end
 end
