@@ -1,0 +1,41 @@
+name: Run example
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+
+    runs-on: macos-11
+    env:
+      PLATFORM_VERSION: '15.2'
+      XCODE_VERSION: '13.2'
+      DEVICE_NAME: iPhone 11 Pro Max
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Appium env
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        check-latest: true
+    - name: Install Appium XCUITest
+      run: |
+        npm install -g appium@next
+        appium driver install xcuitest
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
+      with:
+        ruby-version: 3.1
+        bundler-cache: true
+    - name: Run example
+      run: |
+        cd example
+        gem install
+        bundle exec rspec spec/ios_example_spec.rb
