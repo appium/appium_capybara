@@ -45,3 +45,7 @@ jobs:
         cd example
         bundle install
         bundle exec rspec spec/ios_example_spec.rb
+    - name: Upload appium.out
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        path: appium.out
