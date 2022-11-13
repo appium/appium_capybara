@@ -1,10 +1,19 @@
+#### v2.0.1 2022-11-12
+
+- [5704c96](https://github.com/appium/appium_capybara/commit/5704c968c4f205898020d4496f65e971ac808c11) Release 2.0.1
+- [4072558](https://github.com/appium/appium_capybara/commit/4072558be376c69cb4e7b84e21967c0957403a56) fix: add webdrivererror handler instead of calling just name (#66)
+- [37f10b8](https://github.com/appium/appium_capybara/commit/37f10b8da484625de9d4c0377dd503eae13e89bd) update release_notes (#64)
+- [7303687](https://github.com/appium/appium_capybara/commit/7303687fd93b109f112e1ac4bcd37cdcacb8be30) fix Capybara::Node::Element.inspect (#62)
+
+
 #### v2.0.0 2021-11-11
 
 - [503a8d5](https://github.com/appium/appium_capybara/commit/503a8d5bfbc058257a4352fb68a841b1c4628f62) chore: bump version
 - [2db4ab7](https://github.com/appium/appium_capybara/commit/2db4ab76b1af74cfa9967ec218aac3b627f0f4e2) chore: tweak appium_lib version
 - [2569793](https://github.com/appium/appium_capybara/commit/2569793b713eeeb8a677bdd8269c26dd3cb0bc5c) chore: bump version to rc2
 - [90b5b57](https://github.com/appium/appium_capybara/commit/90b5b57139ce60c7971b285019a3b26aa5f70547) chore: bump appium_lib to rc5
-- [0d30dde](https://github.com/appium/appium_capybara/commit/0d30dde8a8548f7c933270958b5cf3ca5978ba6a) chore: bump base ruby_lib ver to 12 rc, bump version (#60) 
+- [0d30dde](https://github.com/appium/appium_capybara/commit/0d30dde8a8548f7c933270958b5cf3ca5978ba6a) chore: bump base ruby_lib ver to 12 rc, bump version (#60)
+
 
 #### v1.10.0 2019-11-23
 
