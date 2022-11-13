@@ -4,3 +4,4 @@ platformVersion = "15.2"
 deviceName ="iPhone 12"
 automationName = 'XCUITest'
 app = "./UICatalog.app.zip"
+wdaLaunchTimeout = 600000
