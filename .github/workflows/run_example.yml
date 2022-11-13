@@ -16,10 +16,13 @@ jobs:
     env:
       PLATFORM_VERSION: '15.2'
       XCODE_VERSION: '13.2'
-      DEVICE_NAME: iPhone 12
 
     steps:
     - uses: actions/checkout@v3
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: ${{ env.XCODE_VERSION }}
+    - run: xcrun simctl list
     - name: Set up Appium env
       uses: actions/setup-node@v3
       with:
@@ -31,7 +34,7 @@ jobs:
         appium driver install xcuitest
     - name: run Appium background
       run: |
-        nohup appium --base-path=/wd/hub --log-timestamp --log-no-colors appium.out 2>&1 &
+        nohup appium --base-path=/wd/hub --log-timestamp --log-no-colors > appium.out 2>&1 &
     - name: Set up Ruby
       uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
       with:
