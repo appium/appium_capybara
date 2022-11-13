@@ -16,7 +16,7 @@ jobs:
     env:
       PLATFORM_VERSION: '15.2'
       XCODE_VERSION: '13.2'
-      DEVICE_NAME: iPhone 11 Pro Max
+      DEVICE_NAME: iPhone 12
 
     steps:
     - uses: actions/checkout@v3
@@ -37,5 +37,5 @@ jobs:
     - name: Run example
       run: |
         cd example
-        gem install
+        bundle install
         bundle exec rspec spec/ios_example_spec.rb
