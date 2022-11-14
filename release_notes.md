@@ -1,3 +1,12 @@
+#### v2.0.2 2022-11-13
+
+- [1145db9](https://github.com/appium/appium_capybara/commit/1145db93010c2cfbcf3a14faeb3dfac03a058e4a) Release 2.0.2
+- [0058aa4](https://github.com/appium/appium_capybara/commit/0058aa4d4efec6e60d45d32e2963b0a7f6fdeccd) chore: remove appium.txt (#70)
+- [07b9ef1](https://github.com/appium/appium_capybara/commit/07b9ef109728efb5d173e3d6b47353eba53306e6) Revert "fix: add webdrivererror handler instead of calling just name (#66)" (#69)
+- [df9fef9](https://github.com/appium/appium_capybara/commit/df9fef9cb2bf081f789945120c81f9c554d3dbd5) ci: fix bundle command (#67)
+- [47e5734](https://github.com/appium/appium_capybara/commit/47e5734815a8aa9ff715cd60c2fa2d5f61357426) ci: run example scenario as a quick test
+
+
 #### v2.0.1 2022-11-12
 
 - [5704c96](https://github.com/appium/appium_capybara/commit/5704c968c4f205898020d4496f65e971ac808c11) Release 2.0.1
