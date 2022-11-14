@@ -7,7 +7,7 @@ class Gem::Specification
 end
 
 Gem::Specification.new do |s|
-  s.required_ruby_version = '>= 2.6'
+  s.required_ruby_version = '>= 2.7'
 
   s.name          = 'appium_capybara'
   s.version       = Appium::Capybara::VERSION
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.license       = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
   s.description   = s.summary = 'Enables appium support in Capybara'
   s.description   += '.' # avoid identical warning
-  s.authors       = s.email = ['scott.bonebrake@gmail.com', 'code@bootstraponline.com', 'jason.s.carr@gmail.com']
+  s.authors       = s.email = ['fly.49.89.over@gmail.com']
   s.homepage      = 'https://github.com/appium/appium_capybara'
   s.require_paths = ['lib']
 
@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'capybara', '~> 3.36'
 
   s.add_development_dependency 'appium_thor', '~> 1.1.6'
-
 
   s.files = s.remove_zip_files(`git ls-files`.split("\n"))
 end
