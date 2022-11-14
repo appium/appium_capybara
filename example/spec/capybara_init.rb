@@ -4,15 +4,17 @@ require 'capybara/rspec'
 require 'appium_capybara'
 require 'site_prism'
 
-caps = Appium.load_appium_txt file: File.expand_path('./', 'appium.txt'), verbose: true
-
-url = 'http://localhost:4723/wd/hub'.freeze
-
 Capybara.register_driver(:appium) do |app|
-  all_options = caps.merge(appium_lib: { server_url: url }, global_driver: false)
-  puts all_options.inspect
-
-  Appium::Capybara::Driver.new app, **all_options
+  Appium::Capybara::Driver.new app, capabilities: {
+      'platformName' => 'ios',
+      'platformVersion' => '16.0',
+      'appium:deviceName' => 'iPhone 12',
+      'appium:automationName' => 'xcuitest',
+      'appium:app' => File.expand_path('UICatalog.app.zip'),
+      'appium:wdaLaunchTimeout' => 600000,
+    },
+    appium_lib: { server_url: 'http://localhost:4723/wd/hub' },
+    global_driver: false
 end
 
 Capybara.default_driver = :appium
