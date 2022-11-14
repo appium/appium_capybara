@@ -1,3 +1,9 @@
+#### v2.1.0 2022-11-13
+
+- [2c5362f](https://github.com/appium/appium_capybara/commit/2c5362f95bdb71af717d1ffeb89841bfa7775ef2) Release 2.1.0
+- [b200990](https://github.com/appium/appium_capybara/commit/b2009905b0901b081a453a31151a1b4929d692f2) chore: fix required ruby version to match with the base appium_lib (#71)
+
+
 #### v2.0.2 2022-11-13
 
 - [1145db9](https://github.com/appium/appium_capybara/commit/1145db93010c2cfbcf3a14faeb3dfac03a058e4a) Release 2.0.2
