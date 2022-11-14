@@ -7,7 +7,7 @@ require 'site_prism'
 Capybara.register_driver(:appium) do |app|
   Appium::Capybara::Driver.new app, capabilities: {
       'platformName' => 'ios',
-      'platformVersion' => '16.0',
+      'platformVersion' => ENV['PLATFORM_VERSION'] || '16.0',
       'appium:deviceName' => 'iPhone 12',
       'appium:automationName' => 'xcuitest',
       'appium:app' => File.expand_path('UICatalog.app.zip'),
