@@ -6,16 +6,30 @@ bundle update
 bundle exec rspec spec/ios_example_spec.rb
 ```
 
-# Use with pry
+# Use `irb` or `pry`
+
+You may need to add `pry` in Gemfile to use `pry` under `bundle`, otherwise you can insert `binding.irb` or `binding.pry` in the example code if needed.
+
+```bash
+$ bndle exec irb
+```
 
 ```ruby
-# start a Pry session and paste the following code
+# start an irb or pry session and paste the following code
 # run from the example folder
 require 'appium_capybara'
 
 Capybara.register_driver(:appium) do |app|
-  opts = Appium.load_appium_txt file: File.join(Dir.pwd, 'appium.txt')
-  Appium::Capybara::Driver.new app, opts
+  Appium::Capybara::Driver.new app, capabilities: {
+      'platformName' => 'ios',
+      'platformVersion' => ENV['PLATFORM_VERSION'] || '16.0',
+      'appium:deviceName' => 'iPhone 12',
+      'appium:automationName' => 'xcuitest',
+      'appium:app' => File.expand_path('UICatalog.app.zip'),
+      'appium:wdaLaunchTimeout' => 600000,
+    },
+    appium_lib: { server_url: 'http://localhost:4723/wd/hub' },
+    global_driver: false
 end
 
 Capybara.default_driver = :appium
