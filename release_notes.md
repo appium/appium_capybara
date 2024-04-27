@@ -1,3 +1,9 @@
+#### v2.1.1 2024-04-27
+
+- [c1fd8b6](https://github.com/appium/appium_capybara/commit/c1fd8b637a1cc74838eca0151be0250ba9445043) Release 2.1.1
+- [f31edf5](https://github.com/appium/appium_capybara/commit/f31edf540e7117bd24432e6ae0002803d41f5375) chore: bump thor to avoid ruby v3 issue
+
+
 #### v2.1.0 2022-11-13
 
 - [2c5362f](https://github.com/appium/appium_capybara/commit/2c5362f95bdb71af717d1ffeb89841bfa7775ef2) Release 2.1.0
