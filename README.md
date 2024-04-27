@@ -69,7 +69,9 @@ Make sure to run `thor bump` or manually modify version.rb before publishing. Ru
 version to be published twice. After the version is bumped, run `thor publish`
 
 
-## Changelogs
+## major changelogs
+- v3.0.0
+    - Support Ruby 3+ only
 
 - v2.0.0
     - Bump base appium_lib version to v12
