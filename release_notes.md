@@ -1,3 +1,9 @@
+#### v3.0.0 2024-04-27
+
+- [4e25275](https://github.com/appium/appium_capybara/commit/4e25275f35bd934b52daf58e60237fe43577aa3f) Release 3.0.0
+- [00014d6](https://github.com/appium/appium_capybara/commit/00014d6c37ec6279f924715371c82d9716fd4598) chore: bump Ruby min version (#72)
+
+
 #### v2.1.1 2024-04-27
 
 - [c1fd8b6](https://github.com/appium/appium_capybara/commit/c1fd8b637a1cc74838eca0151be0250ba9445043) Release 2.1.1
