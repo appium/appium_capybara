@@ -7,7 +7,7 @@ class Gem::Specification
 end
 
 Gem::Specification.new do |s|
-  s.required_ruby_version = '>= 2.7'
+  s.required_ruby_version = Gem::Requirement.new('>= 3.0')
 
   s.name          = 'appium_capybara'
   s.version       = Appium::Capybara::VERSION
