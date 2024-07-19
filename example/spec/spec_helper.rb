@@ -6,9 +6,9 @@ require_relative 'sheets_section'
 require_relative 'home_page'
 
 RSpec.configure do |config|
-  config.after(:each) { Capybara.current_session.driver.quit }
+  config.after(:each) { Capybara.current_session.driver&.quit }
 
   config.after do |result|
-    Capybara.current_session.driver.save_screenshot 'error.png' if result.exception
+    Capybara.current_session.driver&.save_screenshot 'error.png' if result.exception
   end
 end
