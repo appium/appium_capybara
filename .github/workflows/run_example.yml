@@ -16,6 +16,7 @@ jobs:
     env:
       PLATFORM_VERSION: '17.4'
       XCODE_VERSION: '15.3'
+      DEVICE_NAME: iPhone 15 Plus
 
     steps:
     - uses: actions/checkout@v3
