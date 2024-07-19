@@ -32,8 +32,7 @@ jobs:
     - name: Set up Appium env
       uses: actions/setup-node@v3
       with:
-        node-version: 16
-        check-latest: true
+        node-version: 'lts/*'
     - name: Install Appium XCUITest
       run: |
         npm install -g appium
@@ -51,8 +50,8 @@ jobs:
         bundle install
         bundle exec rspec spec/ios_example_spec.rb
     - name: Upload appium.out
-      uses: actions/upload-artifact@v3.1.1
-      if: failure()
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v4
       with:
         path: appium.out
 
