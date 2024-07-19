@@ -11,7 +11,8 @@ Capybara.register_driver(:appium) do |app|
       'appium:deviceName' => ENV['DEVICE_NAME'] || 'iPhone 15 Plus',
       'appium:automationName' => 'xcuitest',
       'appium:app' => File.expand_path('UICatalog.app.zip'),
-      'appium:wdaLaunchTimeout' => 600000,
+      'appium:wdaLaunchTimeout' => 600_000,
+      'appium:simulatorStartupTimeout' => 600_000
     },
     appium_lib: { server_url: 'http://localhost:4723/wd/hub' },
     global_driver: false
