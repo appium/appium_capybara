@@ -1,7 +1,7 @@
 #### v3.1.0 2024-07-20
 
 - [20bb106](https://github.com/appium/appium_capybara/commit/20bb10687dbfe4ad634699948af0628793009cec) Release 3.1.0
-- [62baa84](https://github.com/appium/appium_capybara/commit/62baa848a17a7c92b12a5ac2ba885703dd5b81a7) feat: bump the minimal appium_lib version and modify the upper (#74)
+- [62baa84](https://github.com/appium/appium_capybara/commit/62baa848a17a7c92b12a5ac2ba885703dd5b81a7) feat: bump the minimal appium_lib version and fix/modify the upper limitation (#74)
 
 
 #### v3.0.0 2024-04-27
