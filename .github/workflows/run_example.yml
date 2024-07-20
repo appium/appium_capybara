@@ -54,7 +54,7 @@ jobs:
       with:
         ruby-version: 3.2
     - name: Run example
-      run:
+      run: |
         bundle install
         bundle exec rspec spec/ios_example_spec.rb
       working-directory: example
