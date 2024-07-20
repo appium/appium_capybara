@@ -1,6 +1,8 @@
 name: Run example
 
 on:
+  # Run by manual at this time
+  workflow_dispatch:
   push:
     branches: [ "master" ]
   pull_request:
@@ -12,42 +14,54 @@ permissions:
 jobs:
   test:
 
-    runs-on: macos-11
+    runs-on: macos-14
+
     env:
-      PLATFORM_VERSION: '15.2'
-      XCODE_VERSION: '13.2'
+      PLATFORM_VERSION: '17.4'
+      XCODE_VERSION: '15.3'
+      DEVICE_NAME: iPhone 15 Plus
 
     steps:
     - uses: actions/checkout@v3
-    - uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: ${{ env.XCODE_VERSION }}
-    - run: xcrun simctl list
-    - name: Set up Appium env
+
+    - name: Install Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 16
-        check-latest: true
+        node-version: 'lts/*'
+
+    - name: Select Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: ${{ env.XCODE_VERSION }}
+    - run: defaults write com.apple.iphonesimulator PasteboardAutomaticSync -bool false
+
+    - uses: futureware-tech/simulator-action@v3
+      with:
+        # https://github.com/actions/runner-images/blob/main/images/macos/macos-14-arm64-Readme.md
+        model: ${{ env.DEVICE_NAME }}
+        os_version: ${{ env.PLATFORM_VERSION }}
+
     - name: Install Appium XCUITest
       run: |
-        npm install -g appium@next
+        npm install -g appium
         appium driver install xcuitest
     - name: run Appium background
       run: |
         nohup appium --base-path=/wd/hub --log-timestamp --log-no-colors > appium.out 2>&1 &
+
     - name: Set up Ruby
-      uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.1
-        bundler-cache: true
+        ruby-version: 3.2
     - name: Run example
       run: |
         cd example
         bundle install
         bundle exec rspec spec/ios_example_spec.rb
+
     - name: Upload appium.out
-      uses: actions/upload-artifact@v3.1.1
-      if: failure()
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v4
       with:
         path: appium.out
 

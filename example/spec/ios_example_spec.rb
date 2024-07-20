@@ -15,14 +15,14 @@ describe 'UICatalog smoke test' do
     # Call appium driver's methods
     Capybara.current_session.driver.appium_driver.find_element(:name, 'Buttons').click
     Capybara.current_session.driver.appium_driver.wait do
-      expect(capy_driver.find_custom(:class_name, 'XCUIElementTypeButton').size).to be 6
+      expect(capy_driver.find_custom(:class_name, 'XCUIElementTypeButton').size).to be 8
     end
 
     # Get Appium::Capybara::Node elements
     expect(capy_driver.find_custom(:name, 'X Button')[0].name).to eq('X Button')
 
     e = Capybara.current_session.find(:xpath, '//XCUIElementTypeNavigationBar')
-    expect(e.find(:class, 'XCUIElementTypeButton').text).to eq('UICatalog')
+    expect(e.find(:class, 'XCUIElementTypeButton').text).to eq('UIKitCatalog')
 
     Capybara.current_session.driver.appium_driver.back
 

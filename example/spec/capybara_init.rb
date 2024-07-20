@@ -7,11 +7,12 @@ require 'site_prism'
 Capybara.register_driver(:appium) do |app|
   Appium::Capybara::Driver.new app, capabilities: {
       'platformName' => 'ios',
-      'platformVersion' => ENV['PLATFORM_VERSION'] || '16.0',
-      'appium:deviceName' => 'iPhone 12',
+      'platformVersion' => ENV['PLATFORM_VERSION'] || '17.4',
+      'appium:deviceName' => ENV['DEVICE_NAME'] || 'iPhone 15 Plus',
       'appium:automationName' => 'xcuitest',
       'appium:app' => File.expand_path('UICatalog.app.zip'),
-      'appium:wdaLaunchTimeout' => 600000,
+      'appium:wdaLaunchTimeout' => 600_000,
+      'appium:simulatorStartupTimeout' => 600_000
     },
     appium_lib: { server_url: 'http://localhost:4723/wd/hub' },
     global_driver: false

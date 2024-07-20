@@ -91,9 +91,9 @@ module Appium::Capybara
       action_builder
         .move_to_location(start_x, start_y)
         .pointer_down(:left)
-        .pause(input, duration / 1000)
+        .pause(device: input, duration: duration / 1000)
         .move_to_location(end_x, end_y)
-        .pause(input, 1)
+        .pause(device: input, duration: 1)
         .release
         .perform
     end
