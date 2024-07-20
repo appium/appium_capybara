@@ -54,10 +54,10 @@ jobs:
       with:
         ruby-version: 3.2
     - name: Run example
-      run: |
-        cd example
+      run:
         bundle install
         bundle exec rspec spec/ios_example_spec.rb
+      working-directory: example
 
     - name: Upload appium.out
       if: ${{ always() }}
