@@ -47,7 +47,7 @@ jobs:
         appium driver install xcuitest
     - name: run Appium background
       run: |
-        nohup appium --base-path=/wd/hub --log-timestamp --log-no-colors > appium.out 2>&1 &
+        nohup appium --log-timestamp --log-no-colors > appium.out 2>&1 &
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -55,9 +55,9 @@ jobs:
         ruby-version: 3.2
     - name: Run example
       run: |
-        cd example
         bundle install
         bundle exec rspec spec/ios_example_spec.rb
+      working-directory: example
 
     - name: Upload appium.out
       if: ${{ always() }}

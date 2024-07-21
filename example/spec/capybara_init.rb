@@ -14,7 +14,7 @@ Capybara.register_driver(:appium) do |app|
       'appium:wdaLaunchTimeout' => 600_000,
       'appium:simulatorStartupTimeout' => 600_000
     },
-    appium_lib: { server_url: 'http://localhost:4723/wd/hub' },
+    appium_lib: { server_url: 'http://localhost:4723' },
     global_driver: false
 end
 
