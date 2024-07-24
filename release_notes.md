@@ -1,3 +1,9 @@
+#### v3.1.2 2024-07-23
+
+- [ea74429](https://github.com/appium/appium_capybara/commit/ea74429e86e01be1688cf0250c25f90e2388c789) Release 3.1.2
+- [d214184](https://github.com/appium/appium_capybara/commit/d214184a35227a29cdf6b8e6f7e8cd745506ba4a) fix: replace reset with restart as similar behavior, fix inspect to respect super (#78)
+
+
 #### v3.1.1 2024-07-20
 
 - [b282393](https://github.com/appium/appium_capybara/commit/b28239336dbd2ba0c2ad5b5089b4c9666485b589) Release 3.1.1
