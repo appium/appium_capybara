@@ -64,5 +64,5 @@ jobs:
       if: ${{ always() }}
       uses: actions/upload-artifact@v4
       with:
-        path: appium.out
+        path: appium.log
 
