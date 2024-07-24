@@ -8,8 +8,9 @@ on:
   pull_request:
     branches: [ "master" ]
 
-permissions:
-  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
@@ -47,7 +48,7 @@ jobs:
         appium driver install xcuitest
     - name: run Appium background
       run: |
-        nohup appium --log-timestamp --log-no-colors > appium.out 2>&1 &
+        nohup appium --log-timestamp --log-no-colors > appium.log 2>&1 &
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -59,9 +60,9 @@ jobs:
         bundle exec rspec spec/ios_example_spec.rb
       working-directory: example
 
-    - name: Upload appium.out
+    - name: Upload appium.log
       if: ${{ always() }}
       uses: actions/upload-artifact@v4
       with:
-        path: appium.out
+        path: appium.log
 

@@ -30,6 +30,7 @@ describe 'UICatalog smoke test' do
     Capybara.current_session.driver.appium_driver.find_element(:name, 'Text Fields').click
 
     e = capy_driver.find_custom(:predicate, 'value == "Placeholder text"').first
+    e.inspect
     e.send_keys [:shift, :end]
 
     e = Capybara.current_session.find(:xpath, '//XCUIElementTypeTextField[@value=""]')
