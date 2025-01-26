@@ -7,11 +7,10 @@ class Gem::Specification
 end
 
 Gem::Specification.new do |s|
-  s.required_ruby_version = Gem::Requirement.new('>= 3.0')
+  s.required_ruby_version = Gem::Requirement.new('>= 3.1')
 
   s.name          = 'appium_capybara'
   s.version       = Appium::Capybara::VERSION
-  s.date          = Appium::Capybara::DATE
   s.license       = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
   s.description   = s.summary = 'Enables appium support in Capybara'
   s.description   += '.' # avoid identical warning
@@ -19,10 +18,8 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/appium/appium_capybara'
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'appium_lib', '>= 13.0.0'
-  s.add_runtime_dependency 'capybara', '~> 3.36'
-
-  s.add_development_dependency 'appium_thor', '~> 2.0'
+  s.add_dependency 'appium_lib', '>= 13.0.0'
+  s.add_dependency 'capybara', '~> 3.36'
 
   s.files = s.remove_zip_files(`git ls-files`.split("\n"))
 end
