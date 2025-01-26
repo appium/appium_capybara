@@ -1,3 +1,9 @@
+#### v3.2.0 2025-01-25
+
+- [037f19a](https://github.com/appium/appium_capybara/commit/037f19a6c87e7da9b80a60866f37dfe01e4a3cdd) Release 3.2.0
+- [208ac0e](https://github.com/appium/appium_capybara/commit/208ac0ebf1e1a714d4b8c5256e76d8ee6aab35a8) feat: bump mini ruby version by following selenium
+
+
 #### v3.1.2 2024-07-23
 
 - [ea74429](https://github.com/appium/appium_capybara/commit/ea74429e86e01be1688cf0250c25f90e2388c789) Release 3.1.2
