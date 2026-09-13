@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "037f19a6c87e7da9b80a60866f37dfe01e4a3cdd",
+  "packages": {
+    ".": {
+      "release-type": "ruby",
+      "package-name": "appium_capybara",
+      "version-file": "lib/appium_capybara/version.rb",
+      "include-component-in-tag": false,
+      "include-v-in-tag": true,
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        "lib/appium_capybara/version.rb"
+      ]
+    }
+  }
+}

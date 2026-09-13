@@ -22,4 +22,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'capybara', '~> 3.36'
 
   s.files = s.remove_zip_files(`git ls-files`.split("\n"))
+  # Keep release automation out of the published package.
+  s.files.reject! do |file|
+    file.start_with?('.github/', 'script/', 'test/release/') ||
+      %w[RELEASING.md release-please-config.json .release-please-manifest.json].include?(file)
+  end
+
 end
