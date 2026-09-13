@@ -65,8 +65,8 @@ capy_driver.appium_driver.hide_keyboard
 
 ## Publishing to rubygems
 
-Make sure to run `thor bump` or manually modify version.rb before publishing. RubyGems will not allow the same
-version to be published twice. After the version is bumped, run `thor publish`
+Review and merge the Release Please PR to publish. See [RELEASING.md](RELEASING.md)
+for one-time Trusted Publishing setup and recovery instructions.
 
 
 ## major changelogs
