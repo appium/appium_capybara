@@ -15,14 +15,9 @@ module Appium::Capybara
     end
 
     def long_press
-      action_builder = driver.browser.action
-      input = action_builder.pointer_inputs[0]
-      action_builder
-        .move_to(native)
-        .pointer_down(:left)
-        .pause(device: input, duration: 2)
-        .release
-        .perform
+      action = Appium::TouchAction.new
+      action.long_press(element: native, duration: 2000)
+      action.perform
     end
 
     def find_custom(finder, locator)

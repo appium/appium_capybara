@@ -69,24 +69,12 @@ module Appium::Capybara
 
     # new
     def scroll_up
-      window = appium_driver.window_rect
-      swipe(
-        start_x: window.width / 2,
-        start_y: window.height / 10,
-        end_x: window.width / 2,
-        end_y: window.height * 8 / 10
-      )
+      browser.execute_script('mobile: scroll', direction: 'up')
     end
 
     # new
     def scroll_down
-      window = appium_driver.window_rect
-      swipe(
-        start_x: window.width / 2,
-        start_y: window.height * 8 / 10,
-        end_x: window.width / 2,
-        end_y: window.height / 10
-      )
+      browser.execute_script('mobile: scroll', direction: 'down')
     end
 
     # new
